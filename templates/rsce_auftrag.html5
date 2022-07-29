@@ -1,0 +1,48 @@
+<section class="<?php echo $this->class ?> block"<?php echo $this->cssID ?>>
+    <p><strong>Kunde:</strong> <?= $this->client  ?></p>
+    <p><strong>Website:</strong> <?= $this->website  ?></p>
+    <p><strong>CMS:</strong> <?= $this->cms  ?></p>
+
+    <div class="account">
+        <h3> <strong>CMS-Zugang</strong><?= $this->cms_account  ?></h3>
+    </div>
+
+    <p><strong>Hoster:</strong> <?= $this->host  ?></p>
+
+    <div class="account">
+        <h3><strong>Provider Login</strong> <?= $this->provider_login  ?></h3>
+    </div>
+
+    <div class="account">
+        <h3><strong>FTP-Zugang</strong> <?= $this->ftp_account  ?></h3>
+    </div>
+
+    <div class="account">
+        <h3><strong>CMS-Kundenzugang</strong> <?= $this->customer_access  ?></h3>
+    </div>
+
+    <div class="info">
+        <h3><strong>Weitere Infos</strong><?= $this->infos  ?></h3>
+    </div>
+
+     <div class="account">
+         <h3><strong>Datenbank-Zugang</strong> <?= $this->db_account  ?></h3>
+     </div>
+
+    <div class="features">
+        <h3><strong>Besonderheiten</strong> <?= $this->features  ?></h3>
+    </div>
+
+    <p><strong>Responsive:</strong> <?= $this->responsive  ?>
+        <?php if($this->responsive): ?>
+            <img src="/files/assets/layout/icon-cheked.svg">
+        <?php else: ?>
+            <img src="/files/assets/layout/checkbox.svg">
+        <?php endif; ?>
+    </p>
+
+    <p><strong>Mailversand:</strong> <?= $this->mail  ?></p>
+    <p><strong>Wartungsvertrag:</strong> <?= $this->maintenance  ?>
+    </p>
+
+</section>

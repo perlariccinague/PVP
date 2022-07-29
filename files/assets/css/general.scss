@@ -1,0 +1,16 @@
+@import "header";
+@import "main";
+@import "footer";
+@import "details";
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Mukta', sans-serif;
+  background: #454955;
+}
+

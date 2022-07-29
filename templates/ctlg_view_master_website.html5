@@ -1,0 +1,94 @@
+
+<section class="ce_accordionStart ce_accordion block">
+    <div class="toggler ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-7" aria-controls="ui-id-8" aria-selected="false" aria-expanded="false" tabindex="0"><span><?= $this->title  ?> </span>
+    </div>
+    <div class="accordion ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" style="display: none;" id="ui-id-8" aria-labelledby="ui-id-7" role="tabpanel" aria-hidden="true">
+       <div class="infos">
+           <p ><strong>Kunde:</strong> <?= $this->name  ?></p>
+           <p><strong>URL:</strong><a href="#"> <?= $this->website  ?></a></p>
+           <p><strong>CMS Version:</strong> <?= $this->cms_version  ?></p>
+           <p><strong>Hoster:</strong> <?= $this->hoster  ?></p>
+       </div>
+
+        <div class="account_box">
+         <div class="account">
+           <h3> <strong>CMS-Zugang</strong></h3>
+             <p class="copyText"><img src="/files/assets/layout/user-new.svg">  <span><?= $this->cms_benutzer  ?></span></p>
+           <div class="password">
+             <div class="icon"><img src="/files/assets/layout/password.svg"> <p class="copyText"><span class="invisible_pw"><?= $this->cms_passwort  ?></span><span class="show_hide"><?= $this->cms_passwort  ?></span></p></div>
+            <div class="hide"><img src="/files/assets/layout/eye-hidden.svg"></div>
+            <div class="show"><img src="/files/assets/layout/eye-show.svg"></div>
+          </div>
+          <div class="password">
+              <div class="icon"><img src="/files/assets/layout/password.svg"> <p class="copyText"><span class="invisible_pw"><?= $this->installtool  ?></span><span class="show_hide"><?= $this->installtool  ?></span></p></div>
+           <div class="hide"><img src="/files/assets/layout/eye-hidden.svg"></div>
+           <div class="show"><img src="/files/assets/layout/eye-show.svg"></div>
+          </div>
+      </div>
+
+       <div class="provider_account">
+         <h3><strong>Provider Login</strong></h3>
+         <p class="copyText"><img src="/files/assets/layout/user-new.svg">  <span><?= $this->provider_name  ?></span></p>
+        
+           <?php if($this->provider_passwort != ""): ?>
+             <div class="password">
+                 <div class="icon"><img src="/files/assets/layout/password.svg"><p class="copyText"><span class="invisible_pw"><?= $this->provider_passwort  ?></span><span class="show_hide"><?= $this->provider_passwort  ?></span></p></div>
+              <div class="hide"><img src="/files/assets/layout/eye-hidden.svg"></div>
+              <div class="show"><img src="/files/assets/layout/eye-show.svg"></div>
+             </div>
+           <?php endif; ?>
+       
+         <?php if($this->kunden_menue != ""): ?>
+           <p class="copyText"><img src="/files/assets/layout/hosting.png">  <span><?= $this->kunden_menue  ?></span></p>
+        <?php endif; ?>
+
+     </div>
+
+      <div class="ftp_account">
+         <h3><strong>FTP-Zugang</strong></h3>
+         <p class="copyText"> <img src="/files/assets/layout/server-new.svg">  <span><?= $this->server  ?></span></p>
+         <p class="copyText"> <img src="/files/assets/layout/user-new.svg">  <span><?= $this->ftp_benutzer  ?></span></p>
+         <div class="password">
+             <div class="icon"><img src="/files/assets/layout/password.svg"><p class="copyText"><span class="invisible_pw"><?= $this->ftp_passwort  ?></span><span class="show_hide"><?= $this->ftp_passwort  ?></span></p></div>
+            <div class="hide"><img src="/files/assets/layout/eye-hidden.svg"></div>
+            <div class="show"><img src="/files/assets/layout/eye-show.svg"></div>
+         </div>
+        
+        <?php if($this->ssh_benutzer != ""): ?>   
+        <p class="copyText"> <img src="/files/assets/layout/user-new.svg">  <span><?= $this->ssh_benutzer  ?></span></p>
+        <?php endif; ?>
+        
+        <?php if($this->ssh_passwort != ""): ?>     
+          <div class="password">
+              <div class="icon"><img src="/files/assets/layout/password.svg"><p class="copyText"><span class="invisible_pw"><?= $this->ssh_passwort  ?></span><span class="show_hide"><?= $this->ssh_passwort  ?></span></p></div>
+           <div class="hide"><img src="/files/assets/layout/eye-hidden.svg"></div>
+           <div class="show"><img src="/files/assets/layout/eye-show.svg"></div>
+          </div>
+        <?php endif; ?>
+        <?php if($this->server_ip != ""): ?> 
+         <p class="copyText"> <img src="/files/assets/layout/server-new.svg">  <span><?= $this->server_ip  ?></span></p>
+        <?php endif; ?>  
+      </div>
+
+      <div class="db_account">
+         <h3><strong>Datenbank-Zugang</strong></h3>
+         <p class="copyText"><img src="/files/assets/layout/database.svg">  <span><?= $this->db_hoster  ?></span></p>
+          <p class="copyText"><img src="/files/assets/layout/database-New.svg">  <span><?= $this->db_name  ?></span></p>
+         <p class="copyText"> <img src="/files/assets/layout/user-new.svg">  <span><?= $this->db_benutzer  ?></span></p>
+         <div class="password">
+             <div class="icon"><img src="/files/assets/layout/db-pw.svg"><p class="copyText"><span class="invisible_pw"><?= $this->db_passwort  ?></span><span class="show_hide"><?= $this->db_passwort  ?></span></p></div>
+            <div class="hide"><img src="/files/assets/layout/eye-hidden.svg"></div>
+            <div class="show"><img src="/files/assets/layout/eye-show.svg"></div>
+         </div>
+          <p class="copyText"><img src="/files/assets/layout/database.svg">  <span><?= $this->db_version ?></span></p>
+      </div>
+
+      <?php if($this->besonderheiten != ""): ?> 
+	      <div class="features">
+	        <h3><strong>Besonderheiten</strong></h3>
+	           <p class="copyText"><img src="/files/assets/layout/password.svg">  <span><?= $this->besonderheiten  ?></p></span> <br>
+	      </div>
+      <?php endif; ?>
+    </div>
+  </div>
+</section>

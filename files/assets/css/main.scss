@@ -1,0 +1,226 @@
+.contain {
+  width: 90%;
+  max-width: 1000px;
+  margin: 10px auto;
+  h2 {
+    text-align: center;
+    color: green;
+    border-bottom: 2px solid;
+    border-bottom-style: dashed;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin: 50px auto;
+    padding-bottom: 10px;
+  }
+}
+
+/*Formular */
+.ce_form {
+  position: relative;
+}
+
+#form-search input.search_input {
+  color: white;
+  border-radius: 3px;
+  outline: 0;
+  width: 97%;
+  padding: 12px 12px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+
+}
+#form-search input.search_input:focus, .form-search input.search_input:hover {
+  border: 1px solid transparent;
+  background-position: 100% center;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  border-radius: 2px;
+  padding: 15px 15px;
+
+}
+
+.animation-form input::placeholder {
+  text-align: center;
+  color: white;
+}
+
+#form-search input.submit {
+  position: absolute;
+  right: 89px;
+  top: 5px;
+  width: 30px;
+}
+
+/* Accordion */
+#auftrag_list {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  .ce_rsce_auftrag {
+    margin: 40px;
+  }
+}
+
+.ce_accordionStart.ce_accordion.block {
+  a {
+    text-decoration: none;
+    color: #a0ccda;
+    font-weight: bold;
+    transition: color 250ms;
+    &:hover {
+      color: #e51347;
+    }
+  }
+}
+
+.toggler {
+  color: white;
+  background-color: #a0ccda;
+  border-radius: 18px;
+  padding: 12px 12px;
+  background-size: auto 30px;
+  background-image: url("/files/assets/layout/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: 97%;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+  font-weight: bold;
+  font-size: 28px;
+  margin: 10px auto;
+  transition: filter 250ms, background-color 250ms, background-position ease-out;
+  &:hover {
+    filter: brightness(1.2);
+    background-color: cadetblue;
+  }
+}
+
+.toggler.active {
+  background-image: url("/files/assets/layout/arrow-up.svg");
+}
+
+/* Accordion Box */
+.account_box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.account, .provider_account, .ftp_account, .db_account, .features {
+  background: #0068808c;
+  padding: 6px 23px ;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+  font-weight: 300;
+  width: 20%;
+  border-radius: 10px;
+  h3 {
+    color: white;
+    font-size: 25px;
+  }
+  p {
+    font-size: 15px;
+    color: white;
+    position: relative;
+    &:after {
+      background-image: url("/files/assets/layout/copy-svgrepo-com.svg");
+      background-repeat: no-repeat;
+      cursor: pointer;
+      position: absolute;
+      content: "";
+      right: -15px;
+      top: 2px;
+      width: 18px;
+      height: 20px;
+      filter: invert(1);
+    }
+  }
+}
+
+.copyText1 {
+  &:after {
+    background-image: url("/files/assets/layout/copy-svgrepo-com.svg");
+  }
+}
+
+.copyText.copied {
+  &:after {
+    background-image: url("/files/assets/layout/check.svg");
+    width: 20px;
+  }
+}
+
+.provider_account {
+  background-color: #353A47;
+}
+
+.ftp_account {
+  background-color: #33658A;
+}
+
+.db_account {
+  background-color: #2A9D8F;
+}
+
+.features {
+  background-color: #56282D75;
+}
+
+.features:empty {
+  display: none;
+}
+
+.ce_rsce_auftrag > p {
+  font-size: 20px;
+  img {
+    width: 25px;
+    position: absolute;
+    left: 30%;
+  }
+}
+
+.infos {
+  display: flex;
+  justify-content: space-between;
+  p {
+    background: #8A8D91;
+    padding: 3px 12px;
+    border-radius: 10px;
+    color: white;
+  }
+}
+
+
+@media screen and (max-width: 760px) {
+  .account, .provider_account, .ftp_account, .db_account, .features {
+    width: 100%;
+    padding: 6px 16px;
+  }
+  .toggler {
+    padding: 6px 15px;
+    background-size: auto 26px;
+    font-size: 25px;
+    background-position: 90%;
+  }
+  #form-search input.search_input {
+    width: 92%;
+  }
+  .account, .provider_account, .ftp_account, .db_account, .features {
+    p {
+      &:after {
+        right: -8px;
+      }
+    }
+  }
+  .infos {
+    display: inline-block;
+  }
+}
+
+
+
